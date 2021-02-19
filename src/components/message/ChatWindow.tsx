@@ -2,7 +2,8 @@ import { makeStyles } from "@material-ui/styles"
 
 const useStyles = makeStyles( () => ({
     window: {
-        
+        height: "80%",
+        minHeight: "300px",
         border: "1px solid grey"
     }
 }))
