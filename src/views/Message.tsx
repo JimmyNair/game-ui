@@ -5,9 +5,15 @@ import { ChatWindow } from "../components/message/ChatWindow"
 
 const useStyles = makeStyles( () => ({
     root: {
-        width: "50%",
-        minHeight: "200px",
-        padding: "5px auto"
+       width: "100%",
+       height: "100%"
+    },
+
+    container: {
+        width: "100%",
+        maxWidth: "480px",
+        margin: "10% auto",
+        border: "1px solid black"
     }
 }))
 export const Message = () => {
@@ -21,7 +27,10 @@ export const Message = () => {
     }
     
     return <div className={classes.root}>
+        <div className={classes.container}>
         <ChatWindow messages={chatLog}/>
         <ChatInput send={addToChatLog} />
+
+        </div>
     </div>
 }
